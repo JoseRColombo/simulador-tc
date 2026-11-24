@@ -1,0 +1,225 @@
+{
+  "nome": "L = { w#w | w ∈ {0,1}* }",
+  "descricao": "Ziguezague: marca o 1º símbolo não marcado de w com x, cruza o #, confere o símbolo correspondente e o marca; ao final verifica que só restaram x.",
+  "modo": "reconhecedor",
+  "estados": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "qa"
+  ],
+  "alfabetoEntrada": [
+    "0",
+    "1",
+    "#"
+  ],
+  "alfabetoFita": [
+    "0",
+    "1",
+    "#",
+    "x",
+    "_"
+  ],
+  "branco": "_",
+  "estadoInicial": "q1",
+  "estadoAceita": "qa",
+  "transicoes": [
+    {
+      "de": "q1",
+      "le": "0",
+      "escreve": "x",
+      "move": "R",
+      "para": "q2"
+    },
+    {
+      "de": "q1",
+      "le": "1",
+      "escreve": "x",
+      "move": "R",
+      "para": "q3"
+    },
+    {
+      "de": "q1",
+      "le": "#",
+      "escreve": "#",
+      "move": "R",
+      "para": "q8"
+    },
+    {
+      "de": "q2",
+      "le": "0",
+      "escreve": "0",
+      "move": "R",
+      "para": "q2"
+    },
+    {
+      "de": "q2",
+      "le": "1",
+      "escreve": "1",
+      "move": "R",
+      "para": "q2"
+    },
+    {
+      "de": "q2",
+      "le": "#",
+      "escreve": "#",
+      "move": "R",
+      "para": "q4"
+    },
+    {
+      "de": "q3",
+      "le": "0",
+      "escreve": "0",
+      "move": "R",
+      "para": "q3"
+    },
+    {
+      "de": "q3",
+      "le": "1",
+      "escreve": "1",
+      "move": "R",
+      "para": "q3"
+    },
+    {
+      "de": "q3",
+      "le": "#",
+      "escreve": "#",
+      "move": "R",
+      "para": "q5"
+    },
+    {
+      "de": "q4",
+      "le": "x",
+      "escreve": "x",
+      "move": "R",
+      "para": "q4"
+    },
+    {
+      "de": "q4",
+      "le": "0",
+      "escreve": "x",
+      "move": "L",
+      "para": "q6"
+    },
+    {
+      "de": "q5",
+      "le": "x",
+      "escreve": "x",
+      "move": "R",
+      "para": "q5"
+    },
+    {
+      "de": "q5",
+      "le": "1",
+      "escreve": "x",
+      "move": "L",
+      "para": "q6"
+    },
+    {
+      "de": "q6",
+      "le": "0",
+      "escreve": "0",
+      "move": "L",
+      "para": "q6"
+    },
+    {
+      "de": "q6",
+      "le": "1",
+      "escreve": "1",
+      "move": "L",
+      "para": "q6"
+    },
+    {
+      "de": "q6",
+      "le": "x",
+      "escreve": "x",
+      "move": "L",
+      "para": "q6"
+    },
+    {
+      "de": "q6",
+      "le": "#",
+      "escreve": "#",
+      "move": "L",
+      "para": "q7"
+    },
+    {
+      "de": "q7",
+      "le": "0",
+      "escreve": "0",
+      "move": "L",
+      "para": "q7"
+    },
+    {
+      "de": "q7",
+      "le": "1",
+      "escreve": "1",
+      "move": "L",
+      "para": "q7"
+    },
+    {
+      "de": "q7",
+      "le": "x",
+      "escreve": "x",
+      "move": "R",
+      "para": "q1"
+    },
+    {
+      "de": "q8",
+      "le": "x",
+      "escreve": "x",
+      "move": "R",
+      "para": "q8"
+    },
+    {
+      "de": "q8",
+      "le": "_",
+      "escreve": "_",
+      "move": "S",
+      "para": "qa"
+    }
+  ],
+  "layout": {
+    "q1": [
+      0,
+      0
+    ],
+    "q2": [
+      170,
+      -150
+    ],
+    "q4": [
+      380,
+      -150
+    ],
+    "q3": [
+      170,
+      150
+    ],
+    "q5": [
+      380,
+      150
+    ],
+    "q6": [
+      580,
+      0
+    ],
+    "q7": [
+      300,
+      0
+    ],
+    "q8": [
+      0,
+      290
+    ],
+    "qa": [
+      210,
+      290
+    ]
+  }
+}

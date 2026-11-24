@@ -1,0 +1,15 @@
+{
+  "nome": "Parênteses balanceados",
+  "descricao": "S → (S)S | λ — gera todas as sequências bem formadas de parênteses.",
+  "variaveis": [
+    "S"
+  ],
+  "terminais": [
+    "(",
+    ")"
+  ],
+  "inicial": "S",
+  "producoes": [
+    "S -> (S)S | λ"
+  ]
+}

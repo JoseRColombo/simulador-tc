@@ -1,0 +1,60 @@
+{
+  "nome": "Soma em unário",
+  "descricao": "Entrada 0ᵐ10ⁿ (ex.: 000100 = 3+2). Troca o separador 1 por 0 e apaga o último 0. Saída: 0ᵐ⁺ⁿ.",
+  "modo": "transdutor",
+  "estados": [
+    "q0",
+    "q1",
+    "q2",
+    "qf"
+  ],
+  "alfabetoEntrada": [
+    "0",
+    "1"
+  ],
+  "alfabetoFita": [
+    "0",
+    "1",
+    "_"
+  ],
+  "branco": "_",
+  "estadoInicial": "q0",
+  "estadoAceita": "qf",
+  "transicoes": [
+    {
+      "de": "q0",
+      "le": "0",
+      "escreve": "0",
+      "move": "R",
+      "para": "q0"
+    },
+    {
+      "de": "q0",
+      "le": "1",
+      "escreve": "0",
+      "move": "R",
+      "para": "q1"
+    },
+    {
+      "de": "q1",
+      "le": "0",
+      "escreve": "0",
+      "move": "R",
+      "para": "q1"
+    },
+    {
+      "de": "q1",
+      "le": "_",
+      "escreve": "_",
+      "move": "L",
+      "para": "q2"
+    },
+    {
+      "de": "q2",
+      "le": "0",
+      "escreve": "_",
+      "move": "S",
+      "para": "qf"
+    }
+  ]
+}

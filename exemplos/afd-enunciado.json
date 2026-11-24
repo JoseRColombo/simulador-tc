@@ -1,0 +1,30 @@
+{
+  "tipo": "AFD",
+  "nome": "AFD do enunciado",
+  "descricao": "Exemplo do PDF: aceita exatamente a cadeia \"ab\".",
+  "alfabeto": [
+    "a",
+    "b"
+  ],
+  "estados": [
+    "q0",
+    "q1",
+    "q2"
+  ],
+  "estadoInicial": "q0",
+  "estadosFinais": [
+    "q2"
+  ],
+  "transicoes": [
+    {
+      "de": "q0",
+      "simbolo": "a",
+      "para": "q1"
+    },
+    {
+      "de": "q1",
+      "simbolo": "b",
+      "para": "q2"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "nome": "aⁿbⁿ, n ≥ 1",
+  "descricao": "Empilha um A para cada a, desempilha um A para cada b. Aceita por estado final quando volta ao fundo Z.",
+  "estados": [
+    "q0",
+    "q1",
+    "q2",
+    "q3"
+  ],
+  "alfabetoEntrada": [
+    "a",
+    "b"
+  ],
+  "alfabetoPilha": [
+    "A",
+    "Z"
+  ],
+  "estadoInicial": "q0",
+  "simboloInicialPilha": "Z",
+  "estadosFinais": [
+    "q3"
+  ],
+  "aceitacao": "estadoFinal",
+  "transicoes": [
+    {
+      "de": "q0",
+      "le": "a",
+      "desempilha": "Z",
+      "empilha": "AZ",
+      "para": "q1"
+    },
+    {
+      "de": "q1",
+      "le": "a",
+      "desempilha": "A",
+      "empilha": "AA",
+      "para": "q1"
+    },
+    {
+      "de": "q1",
+      "le": "b",
+      "desempilha": "A",
+      "empilha": "λ",
+      "para": "q2"
+    },
+    {
+      "de": "q2",
+      "le": "b",
+      "desempilha": "A",
+      "empilha": "λ",
+      "para": "q2"
+    },
+    {
+      "de": "q2",
+      "le": "λ",
+      "desempilha": "Z",
+      "empilha": "Z",
+      "para": "q3"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "tipo": "AFD",
+  "nome": "Termina em ab",
+  "descricao": "L = { w ∈ {a,b}* | w termina em ab }. AFD completo.",
+  "alfabeto": [
+    "a",
+    "b"
+  ],
+  "estados": [
+    "q0",
+    "q1",
+    "q2"
+  ],
+  "estadoInicial": "q0",
+  "estadosFinais": [
+    "q2"
+  ],
+  "transicoes": {
+    "q0": {
+      "a": "q1",
+      "b": "q0"
+    },
+    "q1": {
+      "a": "q1",
+      "b": "q2"
+    },
+    "q2": {
+      "a": "q1",
+      "b": "q0"
+    }
+  }
+}

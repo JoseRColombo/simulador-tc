@@ -1,0 +1,49 @@
+{
+  "nome": "Parênteses balanceados",
+  "descricao": "Aceitação por PILHA VAZIA: ao final, desempilha o fundo Z.",
+  "estados": [
+    "q"
+  ],
+  "alfabetoEntrada": [
+    "(",
+    ")"
+  ],
+  "alfabetoPilha": [
+    "X",
+    "Z"
+  ],
+  "estadoInicial": "q",
+  "simboloInicialPilha": "Z",
+  "estadosFinais": [],
+  "aceitacao": "pilhaVazia",
+  "transicoes": [
+    {
+      "de": "q",
+      "le": "(",
+      "desempilha": "Z",
+      "empilha": "XZ",
+      "para": "q"
+    },
+    {
+      "de": "q",
+      "le": "(",
+      "desempilha": "X",
+      "empilha": "XX",
+      "para": "q"
+    },
+    {
+      "de": "q",
+      "le": ")",
+      "desempilha": "X",
+      "empilha": "λ",
+      "para": "q"
+    },
+    {
+      "de": "q",
+      "le": "λ",
+      "desempilha": "Z",
+      "empilha": "λ",
+      "para": "q"
+    }
+  ]
+}

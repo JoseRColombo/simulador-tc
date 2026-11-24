@@ -1,0 +1,15 @@
+{
+  "nome": "aⁿbⁿ",
+  "descricao": "Exemplo do PDF: L(G) = { aⁿbⁿ | n ≥ 0 }.",
+  "variaveis": [
+    "S"
+  ],
+  "terminais": [
+    "a",
+    "b"
+  ],
+  "inicial": "S",
+  "producoes": [
+    "S -> aSb | λ"
+  ]
+}
