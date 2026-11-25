@@ -140,8 +140,8 @@ export function PaginaLinguagens() {
 
         <section className="secao-ling" aria-labelledby="t-estrela">
           <header>
-            <h2 id="t-estrela">Fecho de Kleene</h2>
-            <p>Σ* = Σ⁰ ∪ Σ¹ ∪ Σ² ∪ … inclui λ. Σ⁺ = Σ* − {'{λ}'}. Ambos são infinitos, então listamos até um tamanho k.</p>
+            <h2 id="t-estrela">Σ* e Σ⁺</h2>
+            <p>Σ* são todas as cadeias formadas com os símbolos de Σ, incluindo a vazia λ. Σ⁺ é igual, mas sem o λ. Como são infinitos, listamos até um tamanho k.</p>
           </header>
           <div>
             <div className="linha-campos">
